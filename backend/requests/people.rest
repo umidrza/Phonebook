@@ -1,0 +1,32 @@
+# ================================
+# Variables
+# ================================
+@baseUrl = http://localhost:3001/api/people
+@personId = 69b6eee07a43f9dea3165a0c
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/{{personId}}
+
+###
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "name": "Dwight Schrute",
+    "number": "444-544323"
+}
+
+###
+PUT {{baseUrl}}/{{personId}}
+Content-Type: application/json
+
+{
+    "name": "Dwight Schrute",
+    "number": "444-225242"
+}
+
+###
+DELETE {{baseUrl}}/{{personId}}
